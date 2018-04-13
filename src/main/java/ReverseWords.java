@@ -1,10 +1,13 @@
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
-public class ReverseWords {
+/**
+ * @author https://github.com/diskostu
+ */
+class ReverseWords {
 
     private final static String DELIMITER = " ";
-    public String reverseWords(final String aTextToReverse) {
+    static String reverseWords(final String aTextToReverse) {
         if (StringUtils.isBlank(aTextToReverse)) {
             return aTextToReverse;
         }
