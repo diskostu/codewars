@@ -6,14 +6,14 @@ import org.apache.commons.lang3.StringUtils;
  *
  * @author https://github.com/diskostu
  */
-public class ArithmeticFunction {
+class ArithmeticFunction {
 
     private final static String ADD = "add";
     private final static String SUBTRACT = "subtract";
     private final static String MULTIPLY = "multiply";
     private final static String DIVIDE = "divide";
 
-    public static int arithmetic(final int a, final int b, final String operator) {
+    static int arithmetic(final int a, final int b, final String operator) {
         Preconditions.checkArgument(a >= 0);
         Preconditions.checkArgument(b >= 0);
         Preconditions.checkArgument(!StringUtils.isBlank(operator));
