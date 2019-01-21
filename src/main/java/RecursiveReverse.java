@@ -24,7 +24,6 @@ public class RecursiveReverse {
     }
 
     public static void main(String[] args) {
-        // TODO ggf. vor dem commit wieder entfernen
         System.out.println("final: " + new RecursiveReverse().reverse("hallo"));
     }
 }
