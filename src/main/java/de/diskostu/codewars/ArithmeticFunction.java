@@ -10,10 +10,14 @@ import org.apache.commons.lang3.StringUtils;
  */
 class ArithmeticFunction {
 
-    private final static String ADD = "add";
-    private final static String SUBTRACT = "subtract";
-    private final static String MULTIPLY = "multiply";
-    private final static String DIVIDE = "divide";
+    private static final String ADD = "add";
+    private static final String SUBTRACT = "subtract";
+    private static final String MULTIPLY = "multiply";
+    private static final String DIVIDE = "divide";
+
+
+    private ArithmeticFunction() {
+    }
 
     static int arithmetic(final int a, final int b, final String operator) {
         Preconditions.checkArgument(a >= 0);
@@ -29,8 +33,8 @@ class ArithmeticFunction {
                 return a * b;
             case DIVIDE:
                 return a / b;
+            default:
+                throw new IllegalStateException("unknown operator: " + operator);
         }
-
-        return -1;
     }
 }

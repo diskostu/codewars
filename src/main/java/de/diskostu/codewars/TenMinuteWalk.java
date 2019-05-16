@@ -5,14 +5,18 @@ package de.diskostu.codewars;
  *
  * @author https://github.com/diskostu
  */
-public class TenMinuteWalk {
+class TenMinuteWalk {
 
-    public static boolean isValid(final char[] chars) {
+    private TenMinuteWalk() {
+    }
+
+    static boolean isValid(final char[] chars) {
         if (chars.length != 10) {
             return false;
         }
 
-        int x = 0, y = 0;
+        int x = 0;
+        int y = 0;
 
         // compute the position in the grid
         for (final char aChar : chars) {
@@ -28,6 +32,9 @@ public class TenMinuteWalk {
                     break;
                 case 'e':
                     x++;
+                    break;
+                default:
+                    throw new IllegalArgumentException("unknown direction: " + aChar);
             }
         }
 
