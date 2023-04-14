@@ -1,20 +1,17 @@
 package de.diskostu.codewars;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TenMinuteWalkTest {
 
     @Test
     public void testIsValid() {
-        assertTrue("Should return true", TenMinuteWalk.isValid(new char[]{'n', 's', 'n', 's', 'n', 's', 'n', 's',
-                'n', 's'}));
-        assertFalse("Should return false", TenMinuteWalk.isValid(new char[]{'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e',
-                'w', 'e', 'w', 'e'}));
-        assertFalse("Should return false", TenMinuteWalk.isValid(new char[]{'w'}));
-        assertFalse("Should return false", TenMinuteWalk.isValid(new char[]{'n', 'n', 'n', 's', 'n', 's', 'n', 's',
-                'n', 's'}));
+        assertTrue(TenMinuteWalk.isValid(new char[]{'n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's'}));
+        assertFalse(TenMinuteWalk.isValid(new char[]{'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e'}));
+        assertFalse(TenMinuteWalk.isValid(new char[]{'w'}));
+        assertFalse(TenMinuteWalk.isValid(new char[]{'n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's'}));
     }
 }

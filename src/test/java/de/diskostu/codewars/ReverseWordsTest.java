@@ -1,21 +1,23 @@
 package de.diskostu.codewars;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
- * @author https://github.com/diskostu
+ * @author <a href="https://github.com/diskostu">diskostu</a>
  */
 public class ReverseWordsTest {
 
     @Test
     public void testReverseWords() {
-        Assert.assertEquals("text great really a is This", ReverseWords.reverseWords("This is a really great text"));
+        assertEquals("text great really a is This", ReverseWords.reverseWords("This is a really great text"));
     }
 
     @Test
     public void testReverseWordsEmpty() {
-        Assert.assertNull(ReverseWords.reverseWords(null));
-        Assert.assertEquals("", ReverseWords.reverseWords(""));
+        assertNull(ReverseWords.reverseWords(null));
+        assertEquals("", ReverseWords.reverseWords(""));
     }
 }
