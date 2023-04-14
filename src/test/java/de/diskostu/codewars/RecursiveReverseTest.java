@@ -1,17 +1,18 @@
 package de.diskostu.codewars;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RecursiveReverseTest {
 
-    private RecursiveReverse sut = new RecursiveReverse();
+    private final RecursiveReverse sut = new RecursiveReverse();
 
 
     @Test
     public void test() {
-        Assert.assertEquals("ateb", sut.reverse("beta"));
-        Assert.assertEquals("ollah", sut.reverse("hallo"));
-        Assert.assertEquals("sebastian", sut.reverse("naitsabes"));
+        assertEquals("ateb", sut.reverse("beta"));
+        assertEquals("ollah", sut.reverse("hallo"));
+        assertEquals("sebastian", sut.reverse("naitsabes"));
     }
 }

@@ -1,18 +1,17 @@
 package de.diskostu.codewars;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AnagramTest {
     @Test
     public void exampleTests() {
-        Anagram sut = new Anagram();
+        final Anagram sut = new Anagram();
 
-        assertTrue(sut.isAnagram("foefet", "toffee"));
-        assertTrue(sut.isAnagram("Buckethead", "DeathCubeK"));
-        assertTrue(sut.isAnagram("Twoo", "Woot"));
-        assertFalse(sut.isAnagram("apple", "pale"));
+        assertThat(sut.isAnagram("foefet", "toffee")).isTrue();
+        assertThat(sut.isAnagram("Buckethead", "DeathCubeK")).isTrue();
+        assertThat(sut.isAnagram("Twoo", "Woot")).isTrue();
+        assertThat(sut.isAnagram("apple", "pale")).isFalse();
     }
 }
