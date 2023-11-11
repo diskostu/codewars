@@ -2,7 +2,7 @@ package de.diskostu.codewars;
 
 /**
  * @author @diskostu_muc (Twitter)
- * http://www.codewars.com/kata/is-n-divisible-by-x-and-y/train/java
+ * <a href="http://www.codewars.com/kata/is-n-divisible-by-x-and-y/train/java">Source</a>
  */
 public class DivisibleNb {
 
